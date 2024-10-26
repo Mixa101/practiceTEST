@@ -100,7 +100,7 @@ async def get_number(message : types.Message, state : FSMContext):
         data['number'] = message.text
     await message.answer("Готово скоро отправим товар")
     for i in staff:
-        await bot.send_message(f"article : {data['article']}"
+        await bot.send_message(chat_id= i ,text = f"article : {data['article']}"
                                f"size : {data['size']}"
                                f"count : {data['count']}"
                                f"number : {data['number']}"
